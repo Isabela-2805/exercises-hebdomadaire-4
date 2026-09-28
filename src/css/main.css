@@ -1,0 +1,52 @@
+:root {
+  --color-bg: #fff;
+  --color-nav-bg: #777877;
+  --color-text: #ffffff;
+  --color-text-active: #000000;
+  --color-active-bg: #fff;
+  --color-hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 3rem;
+  background: var(--color-bg);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.nav {
+  display: inline-flex;
+  padding: 0.25rem;
+  background: var(--color-nav-bg);
+  border-radius: 32px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  display: block;
+  padding: 16px 32px;
+  border-radius: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.nav__item:hover:not([aria-current="page"]) {
+  background: var(--color-hover-bg);
+}
+
+.nav__item[aria-current="page"] {
+  background: var(--color-active-bg);
+  color: var(--color-text-active);
+}
