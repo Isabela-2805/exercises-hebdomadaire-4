@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>eikon parcel starter</title>
@@ -8,26 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass+Mono:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=Anta&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass+Mono:wght@300..700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <img class="bg" src="image/plane.jpg" alt="image avion" />
-    <nav class="nav">
-      <ul class="nav__list">
-        <li><a class="nav__item" href="#" aria-current="page">Home</a></li>
-        <li><a class="nav__item" href="#">About us</a></li>
-        <li><a class="nav__item" href="#">Services</a></li>
-        <li><a class="nav__item" href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <main class="hero">
+      <img class="bg" src="image/plane.jpg" alt="image avion" />
+
+      <div class="container">
+        <header class="header">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li>
+                <a class="nav__item" href="#" aria-current="page">Home</a>
+              </li>
+              <li><a class="nav__item" href="#">About us</a></li>
+              <li><a class="nav__item" href="#">Services</a></li>
+              <li><a class="nav__item" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="hero__content">
+          <h1>Ready for take off?</h1>
+          <div class="filters" aria-label="Filtres"></div>
+        </div>
+      </div>
+    </main>
 
     <script src="js/main.js" type="module"></script>
   </body>
