@@ -1,0 +1,119 @@
+:root {
+  --color-bg: #ffffff;
+  --color-nav-bg: rgba(0, 0, 0, 0.5);
+  --color-text: #ffffff;
+  --color-text-active: #000000;
+  --color-active-bg: #ffffff;
+  --color-hover-bg: rgba(255, 255, 255, 0.1);
+  --primary-0: #ffffff;
+  --primary-600: #6c6f72;
+  --primary-900-50: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 40px;
+  border-radius: 32px;
+  border: 4px solid var(--primary-600);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: stretch;
+}
+
+h1 {
+  margin: 0;
+  color: var(--primary-0);
+  font-family: "Lobster", cursive;
+  font-size: clamp(3rem, 8vw, 96px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filters {
+  align-self: stretch;
+  height: 204px;
+  border-radius: 32px;
+  background: var(--primary-900-50);
+}
+
+.nav {
+  display: inline-flex;
+  padding: 0.25rem;
+  background: var(--color-nav-bg);
+  border-radius: 32px;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__item {
+  display: block;
+  padding: 16px 32px;
+  border-radius: 48px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.nav__item:hover:not([aria-current="page"]) {
+  background: var(--color-hover-bg);
+}
+
+.nav__item[aria-current="page"] {
+  background: var(--color-active-bg);
+  color: var(--color-text-active);
+}
